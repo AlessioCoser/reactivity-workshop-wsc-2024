@@ -1,0 +1,23 @@
+{
+  "name": "reactivity-workshop-wsc-2024",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Alessio Coser",
+  "license": "MIT",
+  "keywords": [],
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test-watch": "vitest",
+    "coverage": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "jsdom": "^21.1.0",
+    "vite": "^4.1.4",
+    "vitest": "^1.4.0"
+  }
+}
