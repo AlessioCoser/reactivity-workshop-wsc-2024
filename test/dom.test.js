@@ -67,4 +67,16 @@ describe("dom", () => {
     body.appendChild(element);
     expect(body.innerHTML).toEqual("<strong>custom</strong>");
   });
+
+  it("create a div element that changes the text child on click", () => {
+    const [greet, setGreet] = signal("Hello World!");
+    const onClick = () => setGreet("Ciao Mondo!");
+
+    const element = createElement("div", { onClick, children: greet });
+    body.appendChild(element);
+
+    expect(body.innerHTML).toEqual(`<div>Hello World!</div>`);
+    body.querySelector("div")?.click();
+    expect(body.innerHTML).toEqual(`<div>Ciao Mondo!</div>`);
+  });
 });
