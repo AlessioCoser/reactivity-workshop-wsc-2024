@@ -14,4 +14,11 @@ describe("dom", () => {
 
     expect(body.innerHTML).toEqual("<div></div>");
   });
+
+  it("create a div element with a single text child", () => {
+    const element = createElement("div", { children: "ciao" });
+    body.appendChild(element);
+
+    expect(body.innerHTML).toEqual("<div>ciao</div>");
+  });
 });
