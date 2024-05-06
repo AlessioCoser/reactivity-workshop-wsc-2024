@@ -21,4 +21,15 @@ describe("dom", () => {
 
     expect(body.innerHTML).toEqual("<div>ciao</div>");
   });
+
+  it("create a div element with a single reactive text child", () => {
+    const [count, setCount] = signal(10);
+
+    const element = createElement("div", { children: () => `Size: ${count()}px` });
+    body.appendChild(element);
+
+    expect(body.innerHTML).toEqual("<div>Size: 10px</div>");
+    setCount(20);
+    expect(body.innerHTML).toEqual("<div>Size: 20px</div>");
+  });
 });
