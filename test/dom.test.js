@@ -44,4 +44,16 @@ describe("dom", () => {
     body.appendChild(element);
     expect(body.innerHTML).toEqual("<div><span>child</span></div>");
   });
+
+  it("create a div element with multiple different children", () => {
+    const [count, setCount] = signal(10);
+    const child = createElement("strong", { children: "count" });
+
+    const element = createElement("div", { children: [child, " is ", count, null] });
+
+    body.appendChild(element);
+    expect(body.innerHTML).toEqual("<div><strong>count</strong> is 10</div>");
+    setCount(20);
+    expect(body.innerHTML).toEqual("<div><strong>count</strong> is 20</div>");
+  });
 });
