@@ -36,4 +36,12 @@ describe("dom", () => {
   // TODO
   //  see: examples/02_counter/index.js
   //  run: npm run start:counter
+
+  it("create a div element with a single element as a child", () => {
+    const child = createElement("span", { children: "child" });
+    const element = createElement("div", { children: child });
+
+    body.appendChild(element);
+    expect(body.innerHTML).toEqual("<div><span>child</span></div>");
+  });
 });
