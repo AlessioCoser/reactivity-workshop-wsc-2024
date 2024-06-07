@@ -56,4 +56,15 @@ describe("dom", () => {
     setCount(20);
     expect(body.innerHTML).toEqual("<div><strong>count</strong> is 20</div>");
   });
+
+  it("create an element using a custom element as tag", () => {
+    function CustomElement({ tag }) {
+      return createElement(tag, { children: "custom" });
+    }
+
+    const element = createElement(CustomElement, { tag: "strong" });
+
+    body.appendChild(element);
+    expect(body.innerHTML).toEqual("<strong>custom</strong>");
+  });
 });
