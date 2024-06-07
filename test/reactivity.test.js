@@ -28,4 +28,18 @@ describe("reactivity", () => {
 
     expect(calls).toEqual([0, 1, 2, 3]);
   });
+
+  it("a value change should affect only the registered effects", () => {
+    const calls = [];
+    const [get, set] = signal(0);
+    const [anotherGet, anotherSet] = signal(11)
+
+    effect(() => calls.push(get()));
+    set(1);
+    anotherSet(12);
+    set(2);
+    set(3);
+
+    expect(calls).toEqual([0, 1, 2, 3]);
+  });
 });
