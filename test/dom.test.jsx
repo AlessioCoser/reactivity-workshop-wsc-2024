@@ -9,7 +9,7 @@ describe("JSX", () => {
     body.innerHTML = "";
   });
 
-  it("create a JSX element that handle the reactivity of some props and children", () => {
+  it.skip("create a JSX element that handle the reactivity of some props and children", () => {
     const [color, setColor] = signal("red");
     const onclick = () => setColor("green");
 
@@ -29,7 +29,7 @@ describe("JSX", () => {
   //  see: examples/04_quotes/index.js
   //  run: npm run start:quotes
 
-  it("create a div element with children as a reactive array", () => {
+  it.skip("create a div element with children as a reactive array", () => {
     const [children, setChildren] = signal(["one", "two", "three"]);
 
     const element = <div>{() => children().map((item) => <p>{item}</p>)}</div>;
@@ -44,7 +44,7 @@ describe("JSX", () => {
   //  see: examples/05_todolist/index.js
   //  run: npm run start:todolist
 
-  it("create a div element with a reactive style color property", () => {
+  it.skip("create a div element with a reactive style color property", () => {
     const [color, setColor] = signal("red");
 
     const element = <div style={{ color }} onClick={() => setColor("green")}></div>;

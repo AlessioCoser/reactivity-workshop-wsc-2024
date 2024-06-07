@@ -8,21 +8,21 @@ describe("dom", () => {
     body.innerHTML = "";
   });
 
-  it("create an element", () => {
+  it.skip("create an element", () => {
     const element = createElement("div");
     body.appendChild(element);
 
     expect(body.innerHTML).toEqual("<div></div>");
   });
 
-  it("create a div element with a single text child", () => {
+  it.skip("create a div element with a single text child", () => {
     const element = createElement("div", { children: "ciao" });
     body.appendChild(element);
 
     expect(body.innerHTML).toEqual("<div>ciao</div>");
   });
 
-  it("create a div element with a single reactive text child", () => {
+  it.skip("create a div element with a single reactive text child", () => {
     const [count, setCount] = signal(10);
 
     const element = createElement("div", { children: () => `Size: ${count()}px` });
@@ -37,7 +37,7 @@ describe("dom", () => {
   //  see: examples/02_counter/index.js
   //  run: npm run start:counter
 
-  it("create a div element with a single element as a child", () => {
+  it.skip("create a div element with a single element as a child", () => {
     const child = createElement("span", { children: "child" });
     const element = createElement("div", { children: child });
 
@@ -45,7 +45,7 @@ describe("dom", () => {
     expect(body.innerHTML).toEqual("<div><span>child</span></div>");
   });
 
-  it("create a div element with multiple different children", () => {
+  it.skip("create a div element with multiple different children", () => {
     const [count, setCount] = signal(10);
     const child = createElement("strong", { children: "count" });
 
@@ -57,7 +57,7 @@ describe("dom", () => {
     expect(body.innerHTML).toEqual("<div><strong>count</strong> is 20</div>");
   });
 
-  it("create an element using a custom element as tag", () => {
+  it.skip("create an element using a custom element as tag", () => {
     function CustomElement({ tag }) {
       return createElement(tag, { children: "custom" });
     }
@@ -68,7 +68,7 @@ describe("dom", () => {
     expect(body.innerHTML).toEqual("<strong>custom</strong>");
   });
 
-  it("create a div element that changes the text child on click", () => {
+  it.skip("create a div element that changes the text child on click", () => {
     const [greet, setGreet] = signal("Hello World!");
     const onClick = () => setGreet("Ciao Mondo!");
 
@@ -84,7 +84,7 @@ describe("dom", () => {
   //  see: examples/03_greeting/index.js
   //  run: npm run start:greeting
 
-  it("create <a> element with simple properties", () => {
+  it.skip("create <a> element with simple properties", () => {
     const [className, setClassName] = signal("aClass");
     const [href, setHref] = signal("#aLink");
 

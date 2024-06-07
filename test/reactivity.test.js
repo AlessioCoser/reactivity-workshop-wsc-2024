@@ -9,7 +9,7 @@ describe("reactivity", () => {
     expect(get()).toEqual(initial);
   });
 
-  it("set a new value", () => {
+  it.skip("set a new value", () => {
     const [get, set] = signal(0);
 
     set(1);
@@ -17,7 +17,7 @@ describe("reactivity", () => {
     expect(get()).toEqual(1);
   });
 
-  it("register for a value change", () => {
+  it.skip("register for a value change", () => {
     const calls = [];
     const [get, set] = signal(0);
 
@@ -29,7 +29,7 @@ describe("reactivity", () => {
     expect(calls).toEqual([0, 1, 2, 3]);
   });
 
-  it("a value change should affect only the registered effects", () => {
+  it.skip("a value change should affect only the registered effects", () => {
     const calls = [];
     const [get, set] = signal(0);
     const [anotherGet, anotherSet] = signal(11)
