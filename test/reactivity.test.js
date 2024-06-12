@@ -42,4 +42,8 @@ describe("reactivity", () => {
 
     expect(calls).toEqual([0, 1, 2, 3]);
   });
+
+  // TODO
+  //  see: examples/01_reactivity/index.js
+  //  run: npm run start:reactivity
 });

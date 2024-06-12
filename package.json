@@ -11,7 +11,8 @@
   "scripts": {
     "test": "vitest run",
     "test-watch": "vitest",
-    "coverage": "vitest --coverage"
+    "coverage": "vitest --coverage",
+    "start:reactivity": "vite examples/01_reactivity"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.0",
