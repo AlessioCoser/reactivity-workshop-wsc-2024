@@ -40,3 +40,8 @@ npm run coverage
 ```
 npm run start:reactivity
 ```
+
+### 02 Counter
+```
+npm run start:counter
+```

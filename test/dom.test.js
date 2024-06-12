@@ -32,4 +32,8 @@ describe("dom", () => {
     setCount(20);
     expect(body.innerHTML).toEqual("<div>Size: 20px</div>");
   });
+
+  // TODO
+  //  see: examples/02_counter/index.js
+  //  run: npm run start:counter
 });
