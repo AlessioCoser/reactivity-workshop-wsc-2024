@@ -13,7 +13,8 @@
     "test-watch": "vitest",
     "coverage": "vitest --coverage",
     "start:reactivity": "vite examples/01_reactivity",
-    "start:counter": "vite examples/02_counter"
+    "start:counter": "vite examples/02_counter",
+    "start:greeting": "vite examples/03_greeting"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.0",

@@ -45,3 +45,8 @@ npm run start:reactivity
 ```
 npm run start:counter
 ```
+
+### 03 Greeting
+```
+npm run start:greeting
+```

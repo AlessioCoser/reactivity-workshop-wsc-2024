@@ -79,4 +79,8 @@ describe("dom", () => {
     body.querySelector("div")?.click();
     expect(body.innerHTML).toEqual(`<div>Ciao Mondo!</div>`);
   });
+
+  // TODO
+  //  see: examples/03_greeting/index.js
+  //  run: npm run start:greeting
 });
