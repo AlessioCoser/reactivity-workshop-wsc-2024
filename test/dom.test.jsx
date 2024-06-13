@@ -43,4 +43,15 @@ describe("JSX", () => {
   // TODO
   //  see: examples/05_todolist/index.js
   //  run: npm run start:todolist
+
+  it("create a div element with a reactive style color property", () => {
+    const [color, setColor] = signal("red");
+
+    const element = <div style={{ color }} onClick={() => setColor("green")}></div>;
+    body.appendChild(element);
+
+    expect(body.innerHTML).toEqual(`<div style="color: red;"></div>`);
+    body.querySelector("div")?.click();
+    expect(body.innerHTML).toEqual(`<div style="color: green;"></div>`);
+  });
 });
