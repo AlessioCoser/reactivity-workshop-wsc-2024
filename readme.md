@@ -55,3 +55,8 @@ npm run start:greeting
 ```
 npm run start:greeting
 ```
+
+### 05 TodoList
+```
+npm run start:todolist
+```

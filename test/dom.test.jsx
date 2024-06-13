@@ -39,4 +39,8 @@ describe("JSX", () => {
     setChildren(["four", "five", "six"]);
     expect(body.innerHTML).toEqual("<div><p>four</p><p>five</p><p>six</p></div>");
   });
+
+  // TODO
+  //  see: examples/05_todolist/index.js
+  //  run: npm run start:todolist
 });

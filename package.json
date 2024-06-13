@@ -15,7 +15,8 @@
     "start:reactivity": "vite examples/01_reactivity",
     "start:counter": "vite examples/02_counter",
     "start:greeting": "vite examples/03_greeting",
-    "start:quotes": "vite examples/04_quotes"
+    "start:quotes": "vite examples/04_quotes",
+    "start:todolist": "vite examples/05_todolist"
   },
   "devDependencies": {
     "@types/jsdom": "^21.1.0",
