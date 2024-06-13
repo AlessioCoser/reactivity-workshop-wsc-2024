@@ -28,4 +28,15 @@ describe("JSX", () => {
   // TODO
   //  see: examples/04_quotes/index.js
   //  run: npm run start:quotes
+
+  it("create a div element with children as a reactive array", () => {
+    const [children, setChildren] = signal(["one", "two", "three"]);
+
+    const element = <div>{() => children().map((item) => <p>{item}</p>)}</div>;
+
+    body.appendChild(element);
+    expect(body.innerHTML).toEqual("<div><p>one</p><p>two</p><p>three</p></div>");
+    setChildren(["four", "five", "six"]);
+    expect(body.innerHTML).toEqual("<div><p>four</p><p>five</p><p>six</p></div>");
+  });
 });
