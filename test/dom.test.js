@@ -83,4 +83,17 @@ describe("dom", () => {
   // TODO
   //  see: examples/03_greeting/index.js
   //  run: npm run start:greeting
+
+  it("create <a> element with simple properties", () => {
+    const [className, setClassName] = signal("aClass");
+    const [href, setHref] = signal("#aLink");
+
+    const element = createElement("a", { href, className });
+    body.appendChild(element);
+
+    expect(body.innerHTML).toEqual(`<a href="#aLink" class="aClass"></a>`);
+    setClassName("anotherClass");
+    setHref("#anotherLink");
+    expect(body.innerHTML).toEqual(`<a href="#anotherLink" class="anotherClass"></a>`);
+  });
 });
