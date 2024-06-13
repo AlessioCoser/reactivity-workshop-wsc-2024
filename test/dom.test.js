@@ -96,4 +96,7 @@ describe("dom", () => {
     setHref("#anotherLink");
     expect(body.innerHTML).toEqual(`<a href="#anotherLink" class="anotherClass"></a>`);
   });
+
+  // TODO: implement the JSX transformation
+  //  see: dom.test.jsx
 });

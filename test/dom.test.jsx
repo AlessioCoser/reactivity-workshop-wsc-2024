@@ -24,4 +24,8 @@ describe("JSX", () => {
     body.querySelector("div")?.click();
     expect(body.innerHTML).toEqual(`<div><p>color is:</p><span class="green">green</span></div>`);
   });
+
+  // TODO
+  //  see: examples/04_quotes/index.js
+  //  run: npm run start:quotes
 });

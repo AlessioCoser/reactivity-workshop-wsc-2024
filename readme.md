@@ -50,3 +50,8 @@ npm run start:counter
 ```
 npm run start:greeting
 ```
+
+### 04 Quotes
+```
+npm run start:greeting
+```
